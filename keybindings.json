@@ -29,16 +29,8 @@
         "command": "-workbench.action.quit"
     },
     {
-        "key": "ctrl+q",
-        "command": "workbench.action.previousEditor"
-    },
-    {
         "key": "ctrl+pageup",
         "command": "-workbench.action.previousEditor"
-    },
-    {
-        "key": "ctrl+e",
-        "command": "workbench.action.nextEditor"
     },
     {
         "key": "ctrl+pagedown",
@@ -106,10 +98,6 @@
         "when": "!suggestWidgetVisible"
     },
     {
-        "key": "ctrl+l",
-        "command": "workbench.action.toggleSidebarVisibility"
-    },
-    {
         "key": "ctrl+b",
         "command": "-workbench.action.toggleSidebarVisibility"
     },
@@ -124,19 +112,11 @@
     },
     {
         "key": "ctrl+j",
-        "command": "workbench.action.togglePanel"
-    },
-    {
-        "key": "ctrl+j",
         "command": "-workbench.action.togglePanel"
     },
     {
         "key": "ctrl+0",
         "command": "-workbench.action.focusSideBar"
-    },
-    {
-        "key": "ctrl+h",
-        "command": "workbench.action.toggleAuxiliaryBar"
     },
     {
         "key": "ctrl+alt+b",
@@ -546,5 +526,41 @@
         "key": "ctrl+p",
         "command": "workbench.action.quickOpenSelectPrevious",
         "when": "!textInputFocus"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "workbench.action.nextEditorInGroup",
+        "when": "!panelFocus"
+    },
+    {
+        "key": "ctrl+k ctrl+pagedown",
+        "command": "-workbench.action.nextEditorInGroup"
+    },
+    {
+        "key": "ctrl+q",
+        "command": "workbench.action.previousEditorInGroup",
+        "when": "!panelFocus"
+    },
+    {
+        "key": "ctrl+k ctrl+pageup",
+        "command": "-workbench.action.previousEditorInGroup"
+    },
+    {
+        "key": "ctrl+w p",
+        "command": "workbench.action.togglePanel"
+    },
+    {
+        "key": "ctrl+]",
+        "command": "-editor.action.indentLines",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+[",
+        "command": "-editor.action.outdentLines",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+w shift+p",
+        "command": "workbench.action.toggleMaximizedPanel"
     }
 ]

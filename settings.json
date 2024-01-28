@@ -30,8 +30,7 @@
   "clangTidy.executable": "/usr/bin/clang-tidy",
   "C_Cpp.intelliSenseEngine": "disabled",
   "clangd.path": "/home/d7ry/.config/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/17.0.3/clangd_17.0.3/bin/clangd",
-  "workbench.iconTheme": "catppuccin-macchiato",
-  "editor.fontFamily": "monospacemonospace",
+  "editor.fontFamily": "monospace",
   "editor.fontLigatures": true,
   "editor.codeLensFontFamily": "monospace",
   "editor.inlayHints.fontFamily": "monospace",
@@ -123,8 +122,7 @@
   "gitlens.hovers.enabled": false,
   "python.analysis.inlayHints.callArgumentNames": "all",
   "python.analysis.inlayHints.variableTypes": true,
-  "workbench.colorTheme": "Visual Studio 2019 Dark plus syntax",
-  "workbench.editor.showTabs": "single",
+  "workbench.colorTheme": "Catppuccin Mocha",
   "chatgpt.lang": "en",
   "cSpell.userWords": ["shortterm"],
   "settingsSync.keybindingsPerPlatform": false,
@@ -334,6 +332,7 @@
     }
   ],
   // vim stuff
+  "vim.leader": "<space>",
   "vim.handleKeys": {
     "<C-d>": true,
     "<C-s>": false,
@@ -353,6 +352,10 @@
     {
       "before": ["<C-n>"],
       "commands": ["selectNextSuggestion"]
+    },
+    {
+      "before": ["<C-w>"],
+      "commands": ["deleteWordLeft"]
     }
   ],
   "vim.normalModeKeyBindings": [
@@ -400,6 +403,31 @@
     {
      "before": ["/"],
       "commands": ["editor.action.startFindReplaceAction"] 
-    }
+    },
+    {
+      "before": ["<leader>", "<tab>"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": ["<leader>", "a"],
+      "commands": ["workbench.action.toggleAuxiliaryBar"]
+    },
+    // focusing on left right up down editor groups
+    {
+      "before": ["<leader>", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+    {
+      "before": ["<leader>", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["<leader>", "j"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["<leader>", "k"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
   ]
 }
