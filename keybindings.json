@@ -373,11 +373,6 @@
         "command": "-workbench.action.files.save"
     },
     {
-        "key": "ctrl+f",
-        "command": "actions.find",
-        "when": "editorFocus || editorIsOpen"
-    },
-    {
         "key": "cmd+f",
         "command": "-actions.find",
         "when": "editorFocus || editorIsOpen"
@@ -541,5 +536,15 @@
     {
         "key": "ctrl+t",
         "command": "-workbench.action.showAllSymbols"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "workbench.action.quickOpenSelectNext",
+        "when": "!textInputFocus"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "workbench.action.quickOpenSelectPrevious",
+        "when": "!textInputFocus"
     }
 ]

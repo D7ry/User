@@ -334,10 +334,25 @@
     }
   ],
   // vim stuff
-  "vim.insertModeKeyBindings": [
+  "vim.handleKeys": {
+    "<C-d>": true,
+    "<C-s>": false,
+    "<C-z>": false,
+    "<C-n>": false,
+    "<C-p>": false,
+  },
+  "vim.insertModeKeyBindingsNonRecursive": [
     {
       "before": ["j", "k"],
       "after": ["<Esc>"]
+    },
+    {
+      "before": ["<C-w>"],
+      "commands": ["deleteInsideWord"]
+    },
+    {
+      "before": ["<C-n>"],
+      "commands": ["selectNextSuggestion"]
     }
   ],
   "vim.normalModeKeyBindings": [
@@ -347,6 +362,44 @@
             "workbench.action.showCommands",
         ],
         "silent": true
+    },
+    {
+      "before": ["K"],
+      "commands": [
+          "editor.action.showHover",
+      ]
+    },
+    {
+      "before":["f", "r"],
+      "commands":[
+        "editor.action.referenceSearch.trigger"
+      ]
+    },
+    {
+      "before":["f", "d"],
+      "commands":[
+        "editor.action.peekDefinition"
+      ]
+    },
+    {
+      "before":["f", "t"],
+      "commands":["editor.action.peekTypeDefinition"]
+    },
+    {
+      "before":["f", "s"],
+      "commands":["workbench.action.gotoSymbol"]
+    },
+    {
+      "before":["f", "S"],
+      "commands":["workbench.action.showAllSymbols"]
+    },
+    {
+      "before": ["f", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+     "before": ["/"],
+      "commands": ["editor.action.startFindReplaceAction"] 
     }
-] 
+  ]
 }
