@@ -20,7 +20,6 @@
   "gitlens.hovers.currentLine.over": "line",
   "editor.minimap.enabled": false,
   "redhat.telemetry.enabled": true,
-  "git.openRepositoryInParentFolders": "never",
   "files.associations": {
     "*.spec": "python",
     "*.def": "cpp"
@@ -36,7 +35,7 @@
   "editor.inlayHints.fontFamily": "monospace",
   "debug.console.fontFamily": "",
   "terminal.integrated.fontFamily": "monospace",
-  "editor.inlayHints.enabled": "off",
+  "editor.inlayHints.enabled": "on",
   "vscode_custom_css.imports": [
     "file:///home/d7ry/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.1/dist/updateHandler.js"
   ],
@@ -122,12 +121,11 @@
   "gitlens.hovers.enabled": false,
   "python.analysis.inlayHints.callArgumentNames": "all",
   "python.analysis.inlayHints.variableTypes": true,
-  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.colorTheme": "Visual Studio 2019 Dark plus syntax",
   "chatgpt.lang": "en",
   "cSpell.userWords": ["shortterm"],
   "settingsSync.keybindingsPerPlatform": false,
   "cmake.options.statusBarVisibility": "visible",
-  "diffEditor.ignoreTrimWhitespace": false,
   "cmake.showOptionsMovedNotification": false,
   "workbench.sideBar.location": "right",
   "window.zoomLevel": 1,
@@ -176,7 +174,6 @@
       ]
     }
   },
-  "editor.formatOnSave": true,
   "editor.hover.delay": 50,
   "latex-workshop.latex.tools": [
     {
@@ -292,7 +289,6 @@
     "--output-directory=%OUTDIR%",
     "%DOC%"
   ],
-
   "latex-workshop.latex.recipes": [
     {
       "name": "latexmk",
@@ -332,13 +328,14 @@
     }
   ],
   // vim stuff
+  "vim.useSystemClipboard": true,
   "vim.leader": "<space>",
   "vim.handleKeys": {
     "<C-d>": true,
     "<C-s>": false,
     "<C-z>": false,
     "<C-n>": false,
-    "<C-p>": false,
+    "<C-p>": false
   },
   "vim.insertModeKeyBindingsNonRecursive": [
     {
@@ -359,59 +356,69 @@
     }
   ],
   "vim.normalModeKeyBindings": [
+    // {
+    //     "before": [":"],
+    //     "commands": [
+    //         "workbench.action.showCommands",
+    //     ],
+    //     "silent": true
+    //   },
     {
-        "before": [":"],
-        "commands": [
-            "workbench.action.showCommands",
-        ],
-        "silent": true
+      "before": ["u"],
+      "commands": ["undo"]
+    },
+    {
+      "before": ["p"],
+      "commands": ["editor.action.clipboardPasteAction"]
+    },
+    {
+      "before": ["<C-r>"],
+      "commands": ["redo"]
     },
     {
       "before": ["K"],
-      "commands": [
-          "editor.action.showHover",
-      ]
+      "commands": ["editor.action.showHover"]
     },
     {
-      "before":["f", "r"],
-      "commands":[
-        "editor.action.referenceSearch.trigger"
-      ]
+      "before": ["<Leader>", "f", "r"],
+      "commands": ["editor.action.referenceSearch.trigger"]
     },
     {
-      "before":["f", "d"],
-      "commands":[
-        "editor.action.peekDefinition"
-      ]
+      "before": ["<Leader>","f", "d"],
+      "commands": ["editor.action.peekDefinition"]
     },
     {
-      "before":["f", "t"],
-      "commands":["editor.action.peekTypeDefinition"]
+      "before": ["<Leader>","f", "t"],
+      "commands": ["editor.action.peekTypeDefinition"]
     },
     {
-      "before":["f", "s"],
-      "commands":["workbench.action.gotoSymbol"]
+      "before": ["<Leader>","f", "s"],
+      "commands": ["workbench.action.gotoSymbol"]
     },
     {
-      "before":["f", "S"],
-      "commands":["workbench.action.showAllSymbols"]
+      "before": ["<Leader>","f", "S"],
+      "commands": ["workbench.action.showAllSymbols"]
     },
     {
-      "before": ["f", "f"],
+      "before": ["<Leader>","f", "f"],
       "commands": ["workbench.action.quickOpen"]
     },
     {
-     "before": ["/"],
-      "commands": ["editor.action.startFindReplaceAction"] 
+      "before": ["<Leader>","f", "l"],
+      "commands": ["workbench.action.gotoLine"]
     },
     {
-      "before": ["<leader>", "<tab>"],
-      "commands": ["workbench.action.toggleSidebarVisibility"]
+      "before": ["/"],
+      "commands": ["editor.action.startFindReplaceAction"]
     },
-    {
-      "before": ["<leader>", "a"],
-      "commands": ["workbench.action.toggleAuxiliaryBar"]
-    },
+    // {
+    //   "before": ["<leader>", "<tab>"],
+    //   "commands": ["workbench.action.toggleSidebarVisibility"]
+    // },
+    // {
+    //   "before": ["<leader>", "a"],
+    //   "commands": ["workbench.action.toggleAuxiliaryBar"]
+    // },
     // focusing on left right up down editor groups
     {
       "before": ["<leader>", "l"],
@@ -428,6 +435,11 @@
     {
       "before": ["<leader>", "k"],
       "commands": ["workbench.action.focusAboveGroup"]
-    },
-  ]
+    }
+  ],
+  "editor.lineNumbers": "relative",
+  "workbench.editor.showTabs": "none",
+  "window.commandCenter": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "workbench.statusBar.visible": false
 }
