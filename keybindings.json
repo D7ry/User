@@ -172,18 +172,8 @@
     "when": "customTreeView && listFocus && !inputFocus"
   },
   {
-    "key": "ctrl+'",
-    "command": "github.copilot.nextPanelSolution",
-    "when": "github.copilot.activated && github.copilot.panelVisible"
-  },
-  {
     "key": "alt+]",
     "command": "-github.copilot.nextPanelSolution",
-    "when": "github.copilot.activated && github.copilot.panelVisible"
-  },
-  {
-    "key": "ctrl+;",
-    "command": "github.copilot.previousPanelSolution",
     "when": "github.copilot.activated && github.copilot.panelVisible"
   },
   {
@@ -247,16 +237,8 @@
     "command": "-workbench.action.closeActiveEditor"
   },
   {
-    "key": "ctrl+q",
-    "command": "workbench.action.focusLeftGroup"
-  },
-  {
     "key": "ctrl+k ctrl+left",
     "command": "-workbench.action.focusLeftGroup"
-  },
-  {
-    "key": "ctrl+e",
-    "command": "workbench.action.focusRightGroup"
   },
   {
     "key": "ctrl+k ctrl+right",
@@ -666,5 +648,17 @@
   {
     "key": "ctrl+k right",
     "command": "-workbench.action.moveActiveEditorGroupRight"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "workbench.action.openQuickChat.copilot"
+  },
+  {
+    "key": "ctrl+q",
+    "command": "workbench.action.focusLeftGroup"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "workbench.action.focusRightGroup"
   }
 ]

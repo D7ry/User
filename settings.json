@@ -7,6 +7,9 @@
   "discord.largeImageIdling": "being lazy",
   "remote.SSH.showLoginTerminal": true,
   "editor.inlineSuggest.enabled": true,
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wrappingIndent": "same",
+  "editor.wordWrapColumn": 100,
   "github.copilot.enable": {
     "*": true,
     "plaintext": false,
@@ -100,6 +103,8 @@
   "editor.insertSpaces": true,
   "editor.indentSize": 8,
   "editor.tabSize": 8,
+  "editor.cursorSmoothCaretAnimation": "on", 
+  "editor.cursorStyle": "block-outline",
   "[python]": {
     "editor.formatOnType": true
   },
@@ -121,7 +126,7 @@
   "gitlens.hovers.enabled": false,
   "python.analysis.inlayHints.callArgumentNames": "all",
   "python.analysis.inlayHints.variableTypes": true,
-  "workbench.colorTheme": "Visual Studio 2019 Dark plus syntax",
+  "workbench.colorTheme": "Catppuccin Macchiato",
   "chatgpt.lang": "en",
   "cSpell.userWords": ["shortterm"],
   "settingsSync.keybindingsPerPlatform": false,
@@ -364,6 +369,14 @@
     //     "silent": true
     //   },
     {
+      "before": ["<C-d>"],
+      "after": ["<C-d>", "z", "z" ]
+    },
+    {
+      "before": ["<C-u>"],
+      "after": ["<C-u>", "z", "z"]
+    },
+    {
       "before": ["u"],
       "commands": ["undo"]
     },
@@ -407,10 +420,10 @@
       "before": ["<Leader>","f", "l"],
       "commands": ["workbench.action.gotoLine"]
     },
-    {
-      "before": ["/"],
-      "commands": ["editor.action.startFindReplaceAction"]
-    },
+    // {
+    //   "before": ["/"],
+    //   "commands": ["editor.action.startFindReplaceAction"]
+    // },
     // {
     //   "before": ["<leader>", "<tab>"],
     //   "commands": ["workbench.action.toggleSidebarVisibility"]
@@ -420,26 +433,31 @@
     //   "commands": ["workbench.action.toggleAuxiliaryBar"]
     // },
     // focusing on left right up down editor groups
-    {
-      "before": ["<leader>", "l"],
-      "commands": ["workbench.action.focusRightGroup"]
-    },
-    {
-      "before": ["<leader>", "h"],
-      "commands": ["workbench.action.focusLeftGroup"]
-    },
-    {
-      "before": ["<leader>", "j"],
-      "commands": ["workbench.action.focusBelowGroup"]
-    },
-    {
-      "before": ["<leader>", "k"],
-      "commands": ["workbench.action.focusAboveGroup"]
-    }
+    // {
+    //   "before": ["<leader>", "l"],
+    //   "commands": ["workbench.action.focusRightGroup"]
+    // },
+    // {
+    //   "before": ["<leader>", "h"],
+    //   "commands": ["workbench.action.focusLeftGroup"]
+    // },
+    // {
+    //   "before": ["<leader>", "j"],
+    //   "commands": ["workbench.action.focusBelowGroup"]
+    // },
+    // {
+    //   "before": ["<leader>", "k"],
+    //   "commands": ["workbench.action.focusAboveGroup"]
+    // }
   ],
   "editor.lineNumbers": "relative",
   "workbench.editor.showTabs": "none",
   "window.commandCenter": false,
-  "diffEditor.ignoreTrimWhitespace": false,
-  "workbench.statusBar.visible": false
+  "zenMode.hideLineNumbers": false,
+  "rewrap.autoWrap.enabled": true,
+  "rewrap.wrappingColumn": 80,
+  "[markdown]": {
+    "rewrap.autoWrap.enabled": true,
+    "rewrap.wrappingColumn": 80
+  },
 }
