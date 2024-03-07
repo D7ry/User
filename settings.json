@@ -1,4 +1,5 @@
 {
+  "terminal.integrated.smoothScrolling": true,
   "security.workspace.trust.untrustedFiles": "open",
   "discord.detailsIdling": "being lazy",
   "discord.lowerDetailsIdling": "having IDM opened but not doing any work because I'm lazy ",
@@ -10,6 +11,8 @@
   "editor.wordWrap": "wordWrapColumn",
   "editor.wrappingIndent": "same",
   "editor.wordWrapColumn": 100,
+  "editor.smoothScrolling": true,
+  "workbench.list.smoothScrolling": true,
   "github.copilot.enable": {
     "*": true,
     "plaintext": false,
@@ -38,7 +41,7 @@
   "editor.inlayHints.fontFamily": "monospace",
   "debug.console.fontFamily": "",
   "terminal.integrated.fontFamily": "monospace",
-  "editor.inlayHints.enabled": "on",
+  "editor.inlayHints.enabled": "off",
   "vscode_custom_css.imports": [
     "file:///home/d7ry/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.1/dist/updateHandler.js"
   ],
@@ -99,11 +102,11 @@
     "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
   },
   "C_Cpp.clang_format_style": "{ BasedOnStyle: LLVM, UseTab: Never, IndentWidth: 4, TabWidth: 4, BreakBeforeBraces: Allman, AllowShortIfStatementsOnASingleLine: false, IndentCaseLabels: false, ColumnLimit: 0, AccessModifierOffset: -4, NamespaceIndentation: All, FixNamespaceComments: false }",
-  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: LLVM, UseTab: Never, IndentWidth: 4, TabWidth: 4, BreakBeforeBraces: Allman, AllowShortIfStatementsOnASingleLine: false, IndentCaseLabels: false, ColumnLimit: 0, AccessModifierOffset: -4, NamespaceIndentation: All, FixNamespaceComments: false }",
+  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: LLVM, UseTab: Never, IndentWidth: 4, TabWidth: 4, BreakBeforeBraces: Allman, AllowShortIfStatementsOnASingleLine: false, IndentCaseLabels: false, ColumnLimit: 0, AccessModifierOffset: -4, NamespaceIndentation: All, FixNamespaceComments: false }", 
   "editor.insertSpaces": true,
   "editor.indentSize": 8,
   "editor.tabSize": 8,
-  "editor.cursorSmoothCaretAnimation": "on", 
+  "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorStyle": "block-outline",
   "[python]": {
     "editor.formatOnType": true
@@ -126,13 +129,17 @@
   "gitlens.hovers.enabled": false,
   "python.analysis.inlayHints.callArgumentNames": "all",
   "python.analysis.inlayHints.variableTypes": true,
-  "workbench.colorTheme": "Catppuccin Macchiato",
+  "workbench.colorTheme": "Catppuccin Mocha",
   "chatgpt.lang": "en",
   "cSpell.userWords": ["shortterm"],
   "settingsSync.keybindingsPerPlatform": false,
   "cmake.options.statusBarVisibility": "visible",
   "cmake.showOptionsMovedNotification": false,
   "workbench.sideBar.location": "right",
+  "workbench.colorCustomizations": {
+    "[Catppuccin Mocha]": {
+    }
+  },
   "window.zoomLevel": 1,
   "explorer.confirmDelete": false,
   "extensions.experimental.affinity": {
@@ -333,6 +340,9 @@
     }
   ],
   // vim stuff
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.color": "rgba(173, 216, 230, 0.5)",
+  "vim.highlightedyank.duration": 300,
   "vim.useSystemClipboard": true,
   "vim.leader": "<space>",
   "vim.handleKeys": {
@@ -345,6 +355,10 @@
   "vim.insertModeKeyBindingsNonRecursive": [
     {
       "before": ["j", "k"],
+      "after": ["<Esc>"]
+    },
+    {
+      "before": ["k", "j"],
       "after": ["<Esc>"]
     },
     {
@@ -368,6 +382,10 @@
     //     ],
     //     "silent": true
     //   },
+    {
+      "before": ["<Leader>", "c", "a"],
+      "commands": ["editor.action.refactor"]
+    },
     {
       "before": ["<C-d>"],
       "after": ["<C-d>", "z", "z" ]
@@ -460,4 +478,5 @@
     "rewrap.autoWrap.enabled": true,
     "rewrap.wrappingColumn": 80
   },
+  "workbench.iconTheme": "catppuccin-mocha",
 }
